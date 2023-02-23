@@ -1,5 +1,6 @@
 # JVC2MQTT
 Control JVC/Pioneer projector with serial and control it as switch in Home Assistant
+This is tested with Pioneer Kuro KRF-9000FD which is rebranded version of JVC DLA-HD2. 
 
 Create /home/pi/jvc2mqtt dir and place files there. 
 
