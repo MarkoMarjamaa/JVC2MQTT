@@ -13,7 +13,7 @@ object_id="living_room_projector"
 def on_message(client, userdata, message):
     command = str(message.payload.decode("utf-8"))
     if command == "ON":
-            print("Opening")
+#            print("Opening")
             ser = serial.Serial(port=port,baudrate=19200,parity=serial.PARITY_NONE,stopbits=serial.STOPBITS_ONE,bytesize=serial.EIGHTBITS)
             ser.write(b'\x21\x89\x01\x50\x57\x31\x0A')
             reply = ser.read(6)
@@ -23,7 +23,7 @@ def on_message(client, userdata, message):
                 print("Wrong reply")
             ser.close()
     elif command == "OFF":
-            print("Closing")
+#            print("Closing")
             ser = serial.Serial(port=port,baudrate=19200,parity=serial.PARITY_NONE,stopbits=serial.STOPBITS_ONE,bytesize=serial.EIGHTBITS)
             ser.write(b'\x21\x89\x01\x50\x57\x30\x0A')
             reply = ser.read(6)
