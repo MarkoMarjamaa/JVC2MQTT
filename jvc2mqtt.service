@@ -1,0 +1,12 @@
+[Unit]
+Description=JVC2MQTT
+
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python3 /home/pi/jvc2mqtt/jvc2mqtt.py
+User=pi
+
+[Install]
+WantedBy=multi-user.target
